@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  training-db:
+    image: postgres:15.3-bullseye
+    env_file:
+      - ./db/.env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - appNetwork
+
+  person-app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile.jvm
+    env_file:
+      - ./app/.env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - training-db
+    networks:
+      - appNetwork
+
+volumes:
+  db-data:
+
+networks:
+  appNetwork:
+    driver: bridge
+

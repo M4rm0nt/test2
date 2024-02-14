@@ -1,0 +1,9 @@
+/home/marmont/dev/playground/person/src/main/java/boundary/PersonResource.java
+/home/marmont/dev/playground/person/src/main/java/config/AppConfig.java
+/home/marmont/dev/playground/person/src/main/java/dto/PersonDTO.java
+/home/marmont/dev/playground/person/src/main/java/exception/ConfigurationException.java
+/home/marmont/dev/playground/person/src/main/java/model/Person.java
+/home/marmont/dev/playground/person/src/main/java/repository/PersonRepository.java
+/home/marmont/dev/playground/person/src/main/java/service/PersonService.java
+/home/marmont/dev/playground/person/src/main/java/util/DatabaseConnection.java
+/home/marmont/dev/playground/person/src/main/java/util/PersonMapper.java

@@ -1,0 +1,9 @@
+repository/PersonRepository.class
+util/DatabaseConnection.class
+dto/PersonDTO.class
+boundary/PersonResource.class
+exception/ConfigurationException.class
+model/Person.class
+config/AppConfig.class
+service/PersonService.class
+util/PersonMapper.class
