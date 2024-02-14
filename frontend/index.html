@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personenverwaltung</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="personApp" ng-controller="PersonController">
+
+<div class="form-card">
+    <h2>Person hinzufügen</h2>
+    <form ng-submit="addPerson()">
+        <input type="text" ng-model="newPerson.vorname" placeholder="Vorname" required />
+        <input type="text" ng-model="newPerson.nachname" placeholder="Nachname" required />
+        <input type="email" ng-model="newPerson.email" placeholder="E-Mail" required />
+        <input type="text" ng-model="newPerson.telefonnummer" placeholder="Telefonnummer" required />
+        <input type="text" ng-model="newPerson.strasse" placeholder="Strasse" required />
+        <input type="text" ng-model="newPerson.hausnummer" placeholder="Hausnummer" required />
+        <input type="text" ng-model="newPerson.plz" placeholder="PLZ" required />
+        <button type="submit">Hinzufügen</button>
+    </form>
+</div>
+
+<div class="person-card" ng-repeat="person in persons">
+    <p>{{person.email}}</p>
+</div>
+
+</body>
+</html>
